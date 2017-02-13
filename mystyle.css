@@ -1,0 +1,80 @@
+/*
+ sylte file for Flight Control Centre
+ cerated by Emanuel Bombasaro 28-II-2015
+ edited 01-III-2015
+*/
+
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+body{
+width:800px;
+}
+
+.header img {
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+
+.header h1 {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+#file1 {
+  position: relative;
+  top: -5px;
+  left: 10px;
+  height: 40px;
+}
+
+#upfield {
+  position: relative;
+  top: -30px;
+  left: 160px;
+}
+
+#string1 {
+  position: relative;
+  top: -25px;
+  left: 15px;
+  height: 40px;
+}
+
+#errorc {
+  position: relative;
+  top: -14px;
+  left: 20px;
+}
+
+#map-canvas {
+        width: 800px;
+        height: 600px;
+}
+
+input {
+    text-align:right;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.gray {
+  background-color: gray;
+}

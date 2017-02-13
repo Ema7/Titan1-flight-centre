@@ -1,0 +1,62 @@
+<!--
+	Main flight control centre file
+	The web application allows to vizualize the logged transmission of Fldidi in real time
+	created by Emanuel Bombasaro 27.II.2015
+	edited 01.III.2015 Emanuel Bombasaro
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Flight Control Centre</title>
+    <LINK href="css/mystyle.css" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/TitanControlCentre.js"></script>
+  </head>
+  <body>
+
+
+<div class="header">
+  <img src="images/missionlogo1.jpg" alt="Mission 1 logo">
+	<h1>Flight Control Centre</h1>
+	<div id="file1"> Specify log file: <input type="text" id="fileInput" value="file:///Users/ema/.fldigi/ .log" size="40"></div>
+</div>
+	<div>
+	<pre id="string1">No file selected.<pre>
+	</div>
+
+	<div id="upfield"><input id="stastopB" type="button" onclick="startstop();" value="Start" /></div>
+<div>
+Time: <input type="text" id="time" size="8">
+Position (lon,lat): <input type="text" id="pos" size="19">
+Altitude: <input type="text" id="alt" size="5"> m,
+Satellites: <input type="text" id="sats" size="3">
+</div>
+<p></p>
+<div>
+Temperature: <input type="text" id="temp" size="3"> &deg C,
+Battery status: <progress id="batteryPro" value="0" max="100"></progress> <input type="text" id="battery" size="5"> mV
+</div>
+<p></p>
+<div id="map-canvas"></div>
+<p></p>
+<div class="circle gray" id="Bit0"></div><div id="errorc">GPS Error Condition Noted: <font color="blue">Switch to Max Performance Mode</font></div>
+<div class="circle gray" id="Bit1"></div><div id="errorc">GPS Error Condition Noted: <font color="red">Cold Boot GPS</font></div>
+<div class="circle gray" id="Bit2"></div><div id="errorc">DS18B20 temp sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit3"></div><div id="errorc">Current Dynamic Model: <font color="green">Flight</font>, <font color="blue">Pedestrian</font></div>
+<div class="circle gray" id="Bit4"></div><div id="errorc">PSM status: <font color="green">PSM On</font>, <font color="blue">PSM Off</font></div>
+<div class="circle gray" id="Bit5"></div><div id="errorc">GPS status: <font color="green">Locked</font>, <font color="red">Not Locked</font></div>
+<div class="circle gray" id="Bit6"></div><div id="errorc">TSL2561 lumosity sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit7"></div><div id="errorc">HTU21DF temp humidity sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit8"></div><div id="errorc">MPL3115A2 pressure sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit9"></div><div id="errorc">MCP9808 temperatur precision sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit10"></div><div id="errorc">BMP085 pressure sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit11"></div><div id="errorc">Gyro sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit12"></div><div id="errorc">Acc sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit13"></div><div id="errorc">Mag sensor status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+<div class="circle gray" id="Bit14"></div><div id="errorc">Logging status: <font color="green">OK</font>, <font color="red">Fault</font></div>
+
+<footer>
+  <p>&copy by Emanuel Bombasaro 2015</p>
+</footer>
+  </body>
+</html>
